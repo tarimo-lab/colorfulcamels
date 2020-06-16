@@ -1,0 +1,327 @@
+<h2>Sign up</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+
+
+
+
+<header class="kotha-menu marketing-menu">
+  <nav class="navbar  navbar-default">
+    <div class="container">
+      <div class="menu-content">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                  data-target="#myNavbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" rel="home" href="<%= root_path %>" title="Colorful Camels">
+                <%= image_tag("logo.png", alt: "Colorful Camels Logo", title: "Colorful Camels") %>
+              </a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="top-social-icons list-inline pull-right">
+            <li><a href="<%= new_user_registration_path %>"><i class="fa fa-user-plus"></i> Sign Up</a></li>
+            <li><a href="<%= new_user_session_path %>"><i class="fa fa-sign-in"></i> Sign In</a></li>
+            <li>&nbsp;&nbsp;</li>
+            <li><a href="https://www.instagram.com/colorfulconncamels/" target="_blank"><i class="fa fa-lg fa-instagram"></i></a></li>
+            <li class="top-search">
+              <a href="#" class="sactive">
+                <i class="fa fa-lg fa-search"></i>
+              </a>
+            </li>
+            
+          </ul>
+          <ul class="nav navbar-nav text-uppercase pull-left">
+            <li class="active"><a href="<%= root_path %>"><i class="fa fa-lg fa-home"></i> Home</a></li>
+            <li><a href="<%= home_about_path %>"><i class="fa fa-lg fa-info"></i> About</a></li>
+            
+          </ul>
+        </div>
+        <div class="show-search">
+          <form role="search" method="get" id="searchform" action="<%= home_search_path %>">
+            <input type="text" placeholder="Search and hit enter..." name="s" id="s">
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+</header>
+
+
+<div class="kotha-default-content">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8">
+        <article class="single-blog contact-us">
+          <div class="kotha-logo text-center">
+            <h1><a href="index.html"><img src="assets/images/cover-photo.png" alt="Colorful Camels"></a></h1>
+          </div>
+          <div class="post-content">
+            <div class="entry-header text-center text-uppercase">
+
+              <h2 class="text-left">CREATE YOUR Colorful Camels ACCOUNT</h2>
+            </div>
+            
+
+            <div class="leave-comment">
+              <form class="form-horizontal contact-form"   method="post" action="sendemail.php"
+                     >
+                <div class="form-group">
+                  <div class="row tpad-15">
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control" id="first_name" name="first_name"
+                             placeholder="First Name" required>
+                    </div>
+
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control" id="last_name" name="last_name"
+                             placeholder="Last Name" required>
+                    </div>
+                  </div>
+
+                  <div class="row tpad-15">
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control" id="username" name="username"
+                             placeholder="Username / Nickname" required>
+                    </div>
+
+                    <div class="col-sm-6">
+                      <input type="email" class="form-control" id="email" name="email"
+                             placeholder="Conn Email Address Only" required>
+                    </div>
+                  </div>
+
+                  <div class="row tpad-15">
+                    <div class="col-sm-6">
+                      <input type="password" class="form-control" id="password" name="password"
+                             placeholder="Password" required>
+                    </div>
+                    <div class="col-sm-6">
+                      <input type="password" class="form-control" id="redo_password" name="redo_password"
+                             placeholder="Password Again" required>
+                    </div>
+                  </div>
+
+                  <div class="row tpad-15">
+                    <div class="col-sm-6">
+                      <select class="form-control">
+                        <option>Select Your Conn Affiliation</option>
+                        <option>Student</option>
+                        <option>Faculty</option>
+                        <option>Staff</option>
+                        <option>Alumni</option>
+                        <option>Faculty Emeritus</option>
+                        <option>Retired - Staff</option>
+                        <option>Other</option>
+                      </select>
+                    </div>
+
+                    <div class="col-sm-6" style="padding-top: 10px">
+                      <div class="contact100-form-checkbox">
+                        <input id="ckb2" type="checkbox" name="remember-me">
+                        <label class="label-checkbox100" for="ckb2">
+                          <span class="txt1">
+                            I agree to the <a href="#" class="txt2 hov1">Terms of Use and Privacy Policy.</a>
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+
+                  </div>
+                  
+                </div>
+                
+                <button type="submit" class="btn send-btn"><i class="fa fa-user-plus" aria-hidden="true"></i> CREATE ACCOUNT</button>
+              </form>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="col-sm-4">
+        <div class="kotha-sidebar">
+        
+          <aside class="widget latest-post-widget">
+            <h2 class="widget-title text-uppercase text-center">Popular Posts</h2>
+            <ul>
+              <li class="media">
+                <div class="media-left">
+                  <a href="#" class="popular-img"><img src="assets/images/recent-1.jpg" alt="">
+                  </a>
+                </div>
+                <div class="latest-post-content">
+                  <h2 class="text-uppercase"><a href="#">A Marine Dive From Sky</a></h2>
+                  <p>May 27, 2017</p>
+                </div>
+              </li>
+              <li class="media">
+                <div class="media-left">
+                  <a href="#" class="popular-img"><img src="assets/images/recent-2.jpg" alt="">
+                  </a>
+                </div>
+                <div class="latest-post-content">
+                  <h2 class="text-uppercase"><a href="#">Small Meeting Room</a></h2>
+                  <p>April 27, 2017</p>
+                </div>
+              </li>
+              <li class="media">
+                <div class="media-left">
+                  <a href="#" class="popular-img"><img src="assets/images/recent-3.jpg" alt="">
+                  </a>
+                </div>
+                <div class="latest-post-content">
+                  <h2 class="text-uppercase"><a href="#">Selfie from the beach point</a></h2>
+                  <p>April 20, 2017</p>
+                </div>
+              </li>
+              <li class="media">
+                <div class="media-left">
+                  <a href="#" class="popular-img"><img src="assets/images/recent-4.jpg" alt="">
+                  </a>
+                </div>
+                <div class="latest-post-content">
+                  <h2 class="text-uppercase"><a href="#">Gather Some Artist Pencils.</a></h2>
+                  <p>May 27, 2017</p>
+                </div>
+              </li>
+            </ul>
+          </aside>
+          <aside class="widget latest-post-widget">
+            <h2 class="widget-title text-uppercase text-center">Latest Posts</h2>
+            <ul>
+              <li class="media">
+                <div class="media-left">
+                  <a href="#" class="popular-img"><img src="assets/images/recent-1.jpg" alt="">
+                  </a>
+                </div>
+                <div class="latest-post-content">
+                  <h2 class="text-uppercase"><a href="#">A Marine Dive From Sky</a></h2>
+                  <p>May 27, 2017</p>
+                </div>
+              </li>
+              <li class="media">
+                <div class="media-left">
+                  <a href="#" class="popular-img"><img src="assets/images/recent-2.jpg" alt="">
+                  </a>
+                </div>
+                <div class="latest-post-content">
+                  <h2 class="text-uppercase"><a href="#">Small Meeting Room</a></h2>
+                  <p>April 27, 2017</p>
+                </div>
+              </li>
+              <li class="media">
+                <div class="media-left">
+                  <a href="#" class="popular-img"><img src="assets/images/recent-3.jpg" alt="">
+                  </a>
+                </div>
+                <div class="latest-post-content">
+                  <h2 class="text-uppercase"><a href="#">Selfie from the beach point</a></h2>
+                  <p>April 20, 2017</p>
+                </div>
+              </li>
+              <li class="media">
+                <div class="media-left">
+                  <a href="#" class="popular-img"><img src="assets/images/recent-4.jpg" alt="">
+                  </a>
+                </div>
+                <div class="latest-post-content">
+                  <h2 class="text-uppercase"><a href="#">Gather Some Artist Pencils.</a></h2>
+                  <p>May 27, 2017</p>
+                </div>
+              </li>
+            </ul>
+          </aside>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h4 class="panel-title"><i class="fa fa-user-plus"></i> New to Discovery Teaching?</h4>
+      </div>
+      <div class="panel-body">
+
+        <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+        <form class="form-horizontal" role="form">
+          <div class = "row">
+            <div class="form-group ">
+              <div class="col-md-6 stpad">
+                  <%= f.text_field :first_name, class:"form-control", placeholder: "First Name" %>
+              </div>
+              <div class="col-md-6 stpad">
+                  <%= f.text_field :last_name, class: "form-control", placeholder: "LastName"  %>
+              </div>
+            </div>
+          </div>
+          <div class = "row">
+            <div class="form-group">
+              <div class="col-md-6 stpad">
+                  <%= f.text_field :username, class: "form-control", placeholder: "Username"  %>
+              </div>
+              <div class="col-md-6 stpad">
+                  <%= f.email_field :email, class: "form-control ", placeholder:"Email",:autocomplete => "off" %>
+              </div>
+            </div>
+          </div>
+          <div class = "row">
+            <div class="form-group ">
+              <div class="col-md-6 stpad">
+                  <%= f.password_field :password, class: "form-control", placeholder: "Password",:autocomplete => "off" %>
+              </div>
+              <div class="col-md-6 stpad">
+                  <%= f.password_field :password_confirmation, class: "form-control", id: "password2", placeholder: "Re-enter Password"%>
+              </div>
+            </div>
+          </div>
+          <div class="form-group text-center">
+            <div class = "row tpad">
+              <div class="col-xs-6">
+                <button role="button" id="registerButton" type="submit" class="btn btn-primary btn-block"><i class="glyphicon glyphicon-send"></i> Sign Up</button>
+              </div>
+              <div class="col-xs-6">
+                <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="glyphicon glyphicon-remove"></i> Cancel/Close</button>
+              </div>
+            </div>
+          </div>
+
+        </form>
+        <% end %>
+        
+      </div>
+    </div>
+
+
+    <%= render "devise/shared/links" %>

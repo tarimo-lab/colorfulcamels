@@ -1,0 +1,439 @@
+<header class="kotha-menu marketing-menu">
+	<nav class="navbar  navbar-default">
+		<div class="container">
+			<div class="menu-content">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+					        data-target="#myNavbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" rel="home" href="<%= root_path %>" title="Colorful Camels">
+        				<%= image_tag("logo.png", alt: "Colorful Camels Logo", title: "Colorful Camels") %>
+        			</a>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="top-social-icons list-inline pull-right">
+						<li><a href="<%= new_user_registration_path %>"><i class="fa fa-user-plus"></i> Sign Up</a></li>
+						<li><a href="<%= new_user_session_path %>"><i class="fa fa-sign-in"></i> Sign In</a></li>
+						<li>&nbsp;&nbsp;</li>
+						<li><a href="https://www.instagram.com/colorfulconncamels/"><i class="fa fa-lg fa-instagram"></i></a></li>
+						<li class="top-search">
+							<a href="#" class="sactive">
+								<i class="fa fa-lg fa-search"></i>
+							</a>
+						</li>
+						
+					</ul>
+					<ul class="nav navbar-nav text-uppercase pull-left">
+						<li class="active"><a href="<%= root_path %>"><i class="fa fa-lg fa-home"></i> Home</a></li>
+						<li><a href="<%= home_about_path %>"><i class="fa fa-lg fa-info"></i> About</a></li>
+						
+					</ul>
+				</div>
+				<div class="show-search">
+					<form role="search" method="get" id="searchform" action="<%= home_search_path %>">
+						<input type="text" placeholder="Search and hit enter..." name="s" id="s">
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- /.container-fluid -->
+	</nav>
+	<div class="kotha-logo text-center">
+		<h1><a href="<%= root_path %>">
+			<%= image_tag("cover-photo.png", alt: "Colorful Camels Logo", title: "Colorful Camels") %>
+		</a></h1>
+	</div>
+</header>
+
+
+
+<div class="kotha-default-content">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-8">
+				<article class="single-blog">
+					<div class="post-thumb">
+						<a href=""><img src="assets/images/post-thumb-1.jpg" alt=""></a>
+					</div>
+					<div class="post-content">
+						<div class="entry-header text-center text-uppercase">
+							<h2><a href="single-page.html">Adventure to travel lonely</a></h2>
+						</div>
+						<div class="entry-content">
+							<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+								invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+								accusam
+								et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+								Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+								diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+								voluptua...</p>
+						</div>
+						<div class="continue-reading text-center text-uppercase">
+							<a href="single-page.html">Continue Reading</a>
+						</div>
+						<div class="post-meta">
+							<ul class="pull-left list-inline author-meta">
+								<li class="author">By <a href="#">Jennifer </a></li>
+								<li class="date"> On October 13, 2017</li>
+							</ul>
+							
+						</div>
+					</div>
+				</article>
+				<article class="single-blog">
+					<div class="post-thumb">
+						<a href=""><img src="assets/images/post-thumb-2.jpg" alt=""></a>
+					</div>
+					<div class="post-content">
+						<div class="entry-header text-center text-uppercase">
+							<h2><a href="single-page.html">Playing with kite at beach</a></h2>
+						</div>
+						<div class="entry-content">
+							<p>Sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, Lorem
+								ipsum dolor sit
+								amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+								dolore magna
+								aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+								rebum. Stet clita
+								kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. sed diam
+								voluptua Lorem ipsum
+								dolor sit amet, consetetur sadipscing elitr...</p>
+						</div>
+						<div class="continue-reading text-center text-uppercase">
+							<a href="single-page.html">Continue Reading</a>
+						</div>
+						<div class="post-meta">
+							<ul class="pull-left list-inline author-meta">
+								<li class="author">By <a href="#">Jennifer </a></li>
+								<li class="date"> On September 12, 2017</li>
+							</ul>
+							
+						</div>
+					</div>
+				</article>
+				<article class="single-blog">
+					<div class="post-thumb">
+						<a href="single-page.html"><img src="assets/images/post-thumb-3.jpg" alt=""></a>
+					</div>
+					<div class="post-content">
+						<div class="entry-header text-center text-uppercase">
+							<h2><a href="single-page.html">At vero eos etaccusam
+								et justo duo </a></h2>
+						</div>
+						<div class="entry-content">
+							<p>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Sed
+								diam nonumy eirmod
+								tempor invidunt ut labore et dolore magna aliquyam erat, Lorem ipsum dolor sit amet,
+								consetetur
+								sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+								aliquyam erat, sed
+								diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. sed diam
+								voluptua Lorem ipsum
+								dolor sit sadipscing elitr amet, consetetur ...</p>
+						</div>
+						<div class="continue-reading text-center text-uppercase">
+							<a href="single-page.html">Continue Reading</a>
+						</div>
+						<div class="post-meta">
+							<ul class="pull-left list-inline author-meta">
+								<li class="author">By <a href="#">Jennifer </a></li>
+								<li class="date"> On December 29, 2017</li>
+							</ul>
+							
+						</div>
+					</div>
+				</article>
+				<article class="single-blog">
+					<div class="post-thumb">
+						<a href="single-page.html"><img src="assets/images/post-thumb-4.jpg" alt=""></a>
+					</div>
+					<div class="post-content">
+						<div class="entry-header text-center text-uppercase">
+							<h2><a href="single-page.html">An imaginary for travelers</a></h2>
+						</div>
+						<div class="entry-content">
+							<p>Magna aliquyam erat, Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
+								dolor sit amet.
+								Sed diam nonumy eirmod tempor invidunt ut labore et dolore. Lorem ipsum dolor sit amet,
+								consetetur
+								sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+								aliquyam erat, sed
+								diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. sed diam
+								voluptua Lorem ipsum
+								dolor sit sadipscing elitr amet, consetetur ...</p>
+						</div>
+						<div class="continue-reading text-center text-uppercase">
+							<a href="single-page.html">Continue Reading</a>
+						</div>
+						<div class="post-meta">
+							<ul class="pull-left list-inline author-meta">
+								<li class="author">By <a href="#">Jennifer </a></li>
+								<li class="date"> On June 24, 2017</li>
+							</ul>
+							
+						</div>
+					</div>
+				</article>
+				<article class="single-blog">
+					<div class="post-thumb">
+						<div id="blog-gallery-slider" class="carousel slide" data-ride="carousel">
+							<!-- Wrapper for slides -->
+							<div class="carousel-inner">
+								<div class="item">
+									<a href=""><img src="assets/images/post-thumb-8.jpg" alt=""></a>
+								</div>
+								<div class="item">
+									<a href=""><img src="assets/images/post-thumb-9.jpg"  alt=""></a>
+								</div>
+								<div class="item active">
+									<a href=""> <img src="assets/images/post-thumb-7.jpg" alt=""></a>
+								</div>
+							</div>
+							<!-- Controls -->
+							<a class="left carousel-control" href="#blog-gallery-slider" data-slide="prev">
+								<i class="fa fa-angle-left"></i>
+							</a>
+							<a class="right carousel-control" href="#blog-gallery-slider" data-slide="next">
+								<i class="fa fa-angle-right"></i>
+							</a>
+						</div>
+					</div>
+					<div class="post-content">
+						<div class="entry-header text-center text-uppercase">
+							<a href="" class="post-cat">Slider</a>
+							<h2><a href="single-page.html">Awesome slider post</a></h2>
+						</div>
+						<div class="entry-content">
+							<p>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Sed
+								diam nonumy eirmod
+								tempor invidunt ut labore et dolore magna aliquyam erat, Lorem ipsum dolor sit amet,
+								consetetur
+								sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+								aliquyam erat, sed
+								diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. sed diam
+								voluptua Lorem ipsum
+								dolor sit sadipscing elitr amet, consetetur ...</p>
+						</div>
+						<div class="continue-reading text-center text-uppercase">
+							<a href="single-page.html">Continue Reading</a>
+						</div>
+						<div class="post-meta">
+							<ul class="pull-left list-inline author-meta">
+								<li class="author">By <a href="#">Jennifer </a></li>
+								<li class="date"> On March 17, 2017</li>
+							</ul>
+						</div>
+					</div>
+				</article>
+				<div class="post-pagination  clearfix">
+					<ul class="pagination text-left">
+						<li class="active"><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#"><i class="fa fa-angle-double-right"></i></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="kotha-sidebar">
+					<aside class="widget about-me-widget  text-center">
+						<div class="about-me-content">
+							<div class="about-me-img">
+								<img src="assets/images/me.jpg" alt="" class="img-me img-circle">
+								<h2 class="text-uppercase">John Mwai</h2>
+								<p>Kotha Smith is an enthusiastic and passionate Story Teller. He loves to do different
+									home-made things
+									and share to the world.</p>
+
+								<button type="button" class="text-uppercase btn btn-warning"><i class="fa fa-user"></i> John Mwai</button>
+
+							</div>
+						</div>
+						
+					</aside>
+					
+					<aside class="widget latest-post-widget">
+						<h2 class="widget-title text-uppercase text-center">Popular Posts</h2>
+						<ul>
+							<li class="media">
+								<div class="media-left">
+									<a href="#" class="popular-img"><img src="assets/images/recent-1.jpg" alt="">
+									</a>
+								</div>
+								<div class="latest-post-content">
+									<h2 class="text-uppercase"><a href="#">A Marine Dive From Sky</a></h2>
+									<p>May 27, 2017</p>
+								</div>
+							</li>
+							<li class="media">
+								<div class="media-left">
+									<a href="#" class="popular-img"><img src="assets/images/recent-2.jpg" alt="">
+									</a>
+								</div>
+								<div class="latest-post-content">
+									<h2 class="text-uppercase"><a href="#">Small Meeting Room</a></h2>
+									<p>April 27, 2017</p>
+								</div>
+							</li>
+							<li class="media">
+								<div class="media-left">
+									<a href="#" class="popular-img"><img src="assets/images/recent-3.jpg" alt="">
+									</a>
+								</div>
+								<div class="latest-post-content">
+									<h2 class="text-uppercase"><a href="#">Selfie from the beach point</a></h2>
+									<p>April 20, 2017</p>
+								</div>
+							</li>
+							<li class="media">
+								<div class="media-left">
+									<a href="#" class="popular-img"><img src="assets/images/recent-4.jpg" alt="">
+									</a>
+								</div>
+								<div class="latest-post-content">
+									<h2 class="text-uppercase"><a href="#">Gather Some Artist Pencils.</a></h2>
+									<p>May 27, 2017</p>
+								</div>
+							</li>
+						</ul>
+					</aside>
+					<aside class="widget latest-post-widget">
+						<h2 class="widget-title text-uppercase text-center">Latest Posts</h2>
+						<ul>
+							<li class="media">
+								<div class="media-left">
+									<a href="#" class="popular-img"><img src="assets/images/recent-1.jpg" alt="">
+									</a>
+								</div>
+								<div class="latest-post-content">
+									<h2 class="text-uppercase"><a href="#">A Marine Dive From Sky</a></h2>
+									<p>May 27, 2017</p>
+								</div>
+							</li>
+							<li class="media">
+								<div class="media-left">
+									<a href="#" class="popular-img"><img src="assets/images/recent-2.jpg" alt="">
+									</a>
+								</div>
+								<div class="latest-post-content">
+									<h2 class="text-uppercase"><a href="#">Small Meeting Room</a></h2>
+									<p>April 27, 2017</p>
+								</div>
+							</li>
+							<li class="media">
+								<div class="media-left">
+									<a href="#" class="popular-img"><img src="assets/images/recent-3.jpg" alt="">
+									</a>
+								</div>
+								<div class="latest-post-content">
+									<h2 class="text-uppercase"><a href="#">Selfie from the beach point</a></h2>
+									<p>April 20, 2017</p>
+								</div>
+							</li>
+							<li class="media">
+								<div class="media-left">
+									<a href="#" class="popular-img"><img src="assets/images/recent-4.jpg" alt="">
+									</a>
+								</div>
+								<div class="latest-post-content">
+									<h2 class="text-uppercase"><a href="#">Gather Some Artist Pencils.</a></h2>
+									<p>May 27, 2017</p>
+								</div>
+							</li>
+						</ul>
+					</aside>
+				
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+<p class="navbar-text float-right">
+<% if user_signed_in? %>
+  Logged in as <strong><%= current_user.email %></strong>.
+  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+<% else %>
+  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+<% end %>
+</p>
+
+
+<p id="notice"><%= notice %></p>
+
+<h1>Posts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th>Approved</th>
+      <th>User</th>
+      <th>Anonymous</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @posts.each do |post| %>
+      <tr>
+        <td><%= post.title %></td>
+        <td><%= post.body %></td>
+        <td><%= post.approved %></td>
+        <td><%= post.user %></td>
+        <td><%= post.anonymous %></td>
+        <td><%= link_to 'Show', post %></td>
+        <td><%= link_to 'Edit', edit_post_path(post) %></td>
+        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Post', new_post_path %>
+
+<!-- Standard button -->
+<button type="button" class="btn btn-default">Default</button>
+
+<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+<button type="button" class="btn btn-primary">Primary</button>
+
+<!-- Indicates a successful or positive action -->
+<button type="button" class="btn btn-success">Success</button>
+
+<!-- Contextual button for informational alert messages -->
+<button type="button" class="btn btn-info">Info</button>
+
+<!-- Indicates caution should be taken with this action -->
+<button type="button" class="btn btn-warning">Warning</button>
+
+<!-- Indicates a dangerous or potentially negative action -->
+<button type="button" class="btn btn-danger">Danger</button>
+
+<!-- Deemphasize a button by making it look like a link while maintaining button behavior -->
+<button type="button" class="btn btn-link">Link</button>
+
+
+<i class="fa fa-camera-retro fa-lg"></i> fa-lg
+<i class="fa fa-camera-retro fa-2x"></i> fa-2x
+<i class="fa fa-camera-retro fa-3x"></i> fa-3x
+<i class="fa fa-camera-retro fa-4x"></i> fa-4x
+<i class="fa fa-camera-retro fa-5x"></i> fa-5x

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Colorful Camels</title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : 'A new, shared, dynamic, and interactive space for the Connecticut College community for awareness and introspective, honest discussions about systemic racism.' %>">
+    
+    <%= favicon_link_tag 'logo.png', :rel => 'shortcut icon', :type => 'image/png' %>
+    <%= favicon_link_tag 'logo.png', :rel => 'apple-touch-icon', :type => 'image/png' %>
+
+    <%= javascript_include_tag "application","data-turbolinks-track" => true %>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="blog, community, Connecticut College, racism, inequality, oppression, discussion, camels, #alllivesmatter, #blacklivesmatter">
+    <link
+    href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,700i%7cOswald:300,400,500,600,700%7cPlayfair+Display:400,400i,700,700i"
+    rel="stylesheet">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= yield %>
+    <%= render partial: "partials/footer" %>
+  </body>
+</html>
