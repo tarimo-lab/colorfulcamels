@@ -10,7 +10,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       t.string :last_name
       t.string :username
       t.text   :image_url, default: ""
-      t.integer :affiliation, null: false, default: 1
+      t.integer :affiliation, null: false
       t.integer :role, default: 1
 
       ## Recoverable

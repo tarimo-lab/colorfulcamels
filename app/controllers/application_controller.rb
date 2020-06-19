@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
 
   # Route to user page on sign-in
   def after_sign_in_path_for(resource_or_scope)
-    stored_location_for(resource_or_scope) || user_path(current_user)
+    stored_location_for(resource_or_scope) || posts_path
   end
 
   def after_updated_account_path_for(resource)
@@ -17,7 +17,7 @@ class ApplicationController < ActionController::Base
   # Sets user
   def set_user
     if current_user&.id
-      @user = User.friendly.find(current_user.id)
+      @user = User.find(current_user.id)
     else
       redirect_to new_user_registration_path, errors: 'You need to sign in or sign up before continuing.'
     end
@@ -25,7 +25,7 @@ class ApplicationController < ActionController::Base
 
   def set_current_user
     if current_user&.id
-      @user = User.friendly.find(current_user.id)
+      @user = User.find(current_user.id)
     else
       redirect_to new_user_registration_path, errors: 'You need to sign in or sign up before continuing.'
     end
@@ -70,8 +70,8 @@ class ApplicationController < ActionController::Base
 
   # Allow additional parameters
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:account_update, keys: %i[type affiliation first_name last_name username image_url])
-    devise_parameter_sanitizer.permit(:sign_up, keys: %i[type affiliation first_name last_name username email username image_url])
+    devise_parameter_sanitizer.permit(:account_update, keys: %i[bio role affiliation first_name last_name username image_url])
+    devise_parameter_sanitizer.permit(:sign_up, keys: %i[bio role affiliation first_name last_name username email username image_url])
     devise_parameter_sanitizer.permit(:sign_in, keys: [:email])
   end
 

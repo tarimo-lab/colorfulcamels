@@ -1,0 +1,19 @@
+<% flash.each do |name, msg| %>
+  <% if msg.class == Array %>
+    <% msg.each do |message| %>
+    <% if message != "You are already signed in." %>
+      <div class="text-center flash_<%= name %>" style="padding: 20px;">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true"><i class="fa fa-window-close fa-lg top"></i></button>
+        <strong style="font-size: 17px !important"><%= message %></strong>
+      </div>
+    <% end %>
+    <% end %>
+  <% else %>
+    <% if msg.is_a?(String) && msg != "You are already signed in." %>
+      <div class="text-center flash_<%= name %>" style="padding: 20px;">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true"><i class="fa fa-window-close fa-lg top"></i></button>
+        <strong style="font-size: 17px !important"><%= msg %></strong>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>

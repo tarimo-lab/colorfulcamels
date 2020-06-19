@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :posts
 
-  validates :first_name, :last_name, presence: true
+  validates :first_name, :last_name, :affiliation, presence: true
   validates :username, :email, uniqueness: true, presence: true
   auto_strip_attributes :first_name, :last_name, :username, :squish => true
 

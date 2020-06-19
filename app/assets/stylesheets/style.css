@@ -13,16 +13,20 @@ Version: 2.0
   margin-bottom: 10px; }
 
 body {
-  background: #f4f4f4;
+  background: #f4f4f4 !important;
   color: #444;
   font-family: "Lato", sans-serif;
   font-size: 15px;
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased; }
 
+.widget-title a, .about-me-img h2,footer .ft-copyright p a {
+  color: #da521e !important;
+}
+
 a {
-  color: #444;
-  text-decoration: none;
+  color: #444 !important;
+  text-decoration: none !important;
   -webkit-transition: all 0.33s;
   -moz-transition: all 0.33s;
   -ms-transition: all 0.33s;
@@ -35,7 +39,7 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", sans-serif !important;
   margin-top: 0; }
 
 html {
@@ -91,6 +95,28 @@ input, textarea, button {
 
 img {
   max-width: 100%; }
+
+.flash_notice, .flash_alert {
+  padding: 8px 8px 8px 8px;
+  margin-bottom: 15px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  border: 1px solid #fbeed5;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  font-size: 13px;
+  line-height: 15px;
+}
+.flash_notice {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #468847;
+}
+.flash_alert {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48;
+}
 
 select:focus, select:active, input:focus, input:active, textarea:focus, textarea:active, button:focus, button:active {
   outline: none; }
@@ -808,7 +834,7 @@ select:focus, select:active, input:focus, input:active, textarea:focus, textarea
 
 /*header css*/
 .kotha-logo h1 {
-  margin: 48px auto 55px; }
+  margin: 0px auto 55px; }
 
 li.active {
   background-color: #e7e7e7;
@@ -863,7 +889,7 @@ li.active {
 /*img header bg*/
 #img-header {
   min-height: 450px;
-  background: url(assets/images/header-fixed-bg.jpg) no-repeat scroll 100% 100%;
+  background: url( <%= asset_path 'header-fixed-bg.jpg' %> ) no-repeat scroll 100% 100%;
   background-attachment: fixed;
   -webkit-background-size: cover;
   background-size: cover;
@@ -901,9 +927,7 @@ li.active {
     font-size: 18px;
     letter-spacing: 0.5px;
     padding: 28px 0 16px; }
-.widget-title a, .about-me-img h2 {
-  color: #da521e;
-}
+
 footer {
   background: #333333;
   color: #fff; }
@@ -1092,7 +1116,8 @@ footer {
     letter-spacing: 0.5px;
     margin-bottom: 28px; }
   .kotha-sidebar .widget.about-me-widget {
-    background: url("assets/images/about-me-bg.jpg") no-repeat;
+    background-image: url(/assets/about-me-bg.jpg);
+    background-repeat:no-repeat;
     -webkit-background-size: 100%;
     background-size: 100%;
     background-color: #fff; }
@@ -1392,7 +1417,7 @@ footer {
       margin-bottom: 35px; }
     .single-blog .post-content .continue-reading a {
       border: 1px solid #da521e;
-      color: #da521e;
+      color: #da521e !important;
       display: inline-block;
       font-size: 12px;
       font-weight: 700;
@@ -2360,6 +2385,11 @@ h3.bar-heading.text-uppercase {
 .img-heading {
   padding: 25px 15px 0px;
   color: #FF6C6C; }
+
+.img-me {
+  max-width: 150px;
+  background: #f4f4f4 !important;
+}
 
 .divider-heading {
   color: #a1b1bc; }

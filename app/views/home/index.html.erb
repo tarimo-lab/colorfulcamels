@@ -1,57 +1,8 @@
-<header class="kotha-menu marketing-menu">
-	<nav class="navbar  navbar-default">
-		<div class="container">
-			<div class="menu-content">
-				<!-- Brand and toggle get grouped for better mobile display -->
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-					        data-target="#myNavbar">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" rel="home" href="<%= root_path %>" title="Colorful Camels">
-        				<%= image_tag("logo.png", alt: "Colorful Camels Logo", title: "Colorful Camels") %>
-        			</a>
-				</div>
-				<div class="collapse navbar-collapse" id="myNavbar">
-					<ul class="top-social-icons list-inline pull-right">
-						<li><a href="<%= new_user_registration_path %>"><i class="fa fa-user-plus"></i> Sign Up</a></li>
-						<li><a href="<%= new_user_session_path %>"><i class="fa fa-sign-in"></i> Sign In</a></li>
-						<li>&nbsp;&nbsp;</li>
-						<li><a href="https://www.instagram.com/colorfulconncamels/"><i class="fa fa-lg fa-instagram"></i></a></li>
-						<li class="top-search">
-							<a href="#" class="sactive">
-								<i class="fa fa-lg fa-search"></i>
-							</a>
-						</li>
-						
-					</ul>
-					<ul class="nav navbar-nav text-uppercase pull-left">
-						<li class="active"><a href="<%= root_path %>"><i class="fa fa-lg fa-home"></i> Home</a></li>
-						<li><a href="<%= home_about_path %>"><i class="fa fa-lg fa-info"></i> About</a></li>
-						
-					</ul>
-				</div>
-				<div class="show-search">
-					<form role="search" method="get" id="searchform" action="<%= home_search_path %>">
-						<input type="text" placeholder="Search and hit enter..." name="s" id="s">
-					</form>
-				</div>
-			</div>
-		</div>
-		<!-- /.container-fluid -->
-	</nav>
-	<div class="kotha-logo text-center">
-		<h1><a href="<%= root_path %>">
-			<%= image_tag("cover-photo.png", alt: "Colorful Camels Logo", title: "Colorful Camels") %>
-		</a></h1>
-	</div>
-</header>
-
-
-
+<div class="kotha-logo text-center">
+	<h1><a href="<%= root_path %>">
+		<%= image_tag("cover-photo.png", alt: "Colorful Camels Logo", title: "Colorful Camels") %>
+	</a></h1>
+</div>
 <div class="kotha-default-content">
 	<div class="container">
 		<div class="row">
@@ -230,6 +181,10 @@
 						</div>
 					</div>
 				</article>
+
+				<%= will_paginate @posts %>
+
+
 				<div class="post-pagination  clearfix">
 					<ul class="pagination text-left">
 						<li class="active"><a href="#">1</a></li>
@@ -245,7 +200,7 @@
 					<aside class="widget about-me-widget  text-center">
 						<div class="about-me-content">
 							<div class="about-me-img">
-								<img src="assets/images/me.jpg" alt="" class="img-me img-circle">
+								<%= image_tag("logo.png", class:"img-me img-circle", alt: "A Colorful Camel", title: "A Colorful Camel") %>
 								<h2 class="text-uppercase">John Mwai</h2>
 								<p>Kotha Smith is an enthusiastic and passionate Story Teller. He loves to do different
 									home-made things
@@ -409,31 +364,3 @@
 <br>
 
 <%= link_to 'New Post', new_post_path %>
-
-<!-- Standard button -->
-<button type="button" class="btn btn-default">Default</button>
-
-<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-<button type="button" class="btn btn-primary">Primary</button>
-
-<!-- Indicates a successful or positive action -->
-<button type="button" class="btn btn-success">Success</button>
-
-<!-- Contextual button for informational alert messages -->
-<button type="button" class="btn btn-info">Info</button>
-
-<!-- Indicates caution should be taken with this action -->
-<button type="button" class="btn btn-warning">Warning</button>
-
-<!-- Indicates a dangerous or potentially negative action -->
-<button type="button" class="btn btn-danger">Danger</button>
-
-<!-- Deemphasize a button by making it look like a link while maintaining button behavior -->
-<button type="button" class="btn btn-link">Link</button>
-
-
-<i class="fa fa-camera-retro fa-lg"></i> fa-lg
-<i class="fa fa-camera-retro fa-2x"></i> fa-2x
-<i class="fa fa-camera-retro fa-3x"></i> fa-3x
-<i class="fa fa-camera-retro fa-4x"></i> fa-4x
-<i class="fa fa-camera-retro fa-5x"></i> fa-5x

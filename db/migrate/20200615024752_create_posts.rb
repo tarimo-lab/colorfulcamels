@@ -6,6 +6,7 @@ class CreatePosts < ActiveRecord::Migration[5.2]
       t.boolean :approved, default: false
       t.references :user, foreign_key: true
       t.boolean :anonymous, default: false
+      t.boolean :public, default: false
       t.integer :approves, default: 0
       t.integer :disapproves, default: 0
 

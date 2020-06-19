@@ -1,0 +1,56 @@
+<header class="kotha-menu marketing-menu">
+	<nav class="navbar  navbar-default">
+		<div class="container">
+			<div class="menu-content">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+					        data-target="#myNavbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" rel="home" href="<%= root_path %>" title="Colorful Camels">
+        				<%= image_tag("logo.png", alt: "Colorful Camels Logo", title: "Colorful Camels") %>
+        			</a>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="top-social-icons list-inline pull-right">
+						<% if !user_signed_in? %>
+							<li><a href="<%= new_user_registration_path %>"><i class="fa fa-user-plus"></i> Sign Up</a></li>
+							<li><a href="<%= new_user_session_path %>"><i class="fa fa-sign-in"></i> Sign In</a></li>
+						<% else %>
+							<li><a href="<%= destroy_user_session_path %>"><i class="fa fa-sign-out"></i> Sign Out</a></li>
+						<% end %>
+						<li>&nbsp;&nbsp;</li>
+						<li><a href="https://www.instagram.com/colorfulconncamels/"><i class="fa fa-lg fa-instagram"></i></a></li>
+						<li class="top-search">
+							<a href="#" class="sactive">
+								<i class="fa fa-lg fa-search"></i>
+							</a>
+						</li>
+						
+					</ul>
+					<ul class="nav navbar-nav text-uppercase pull-left">
+						<li class="active"><a href="<%= root_path %>"><i class="fa fa-lg fa-home"></i> Home</a></li>
+						<% if user_signed_in? %>
+							<li><a href="<%= user_root_path %>"><i class="fa fa-lg fa-user"></i> <%= @user.first_name %></a></li>
+						<% end %>
+						<li><a href="<%= home_about_path %>"><i class="fa fa-lg fa-info"></i> About</a></li>
+						
+					</ul>
+				</div>
+				<div class="show-search">
+					<form role="search" method="get" id="searchform" action="<%= home_search_path %>">
+						<input type="text" placeholder="Search and hit enter..." name="s" id="s">
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- /.container-fluid -->
+	</nav>
+	<div class="kotha-logo text-center">
+		<%= render "partials/flash" %> 
+	</div>
+</header>

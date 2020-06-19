@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  devise_for :users
+
   mount ActionCable.server => '/cable'
 
   root 'home#index'
@@ -9,13 +11,13 @@ Rails.application.routes.draw do
   get 'home/search'
   get 'home/feedback'
 
-  devise_for :users
-
   # Provides default path for signed in users
   match 'user_root' => 'users#show', via: :all
+  #match 'users/sign_out' => 'devise/sessions#destroy', via: :all
 
   devise_scope :user do
-    get 'sign_in', to: 'devise/sessions#new'
+    get 'sign_in' => 'devise/sessions#new'
+    get 'users/sign_out'  => 'devise/sessions#destroy'
   end
 
   resources :posts do

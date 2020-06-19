@@ -24,6 +24,10 @@ gem 'pry'
 gem 'pry-stack_explorer'
 gem 'awesome_print'
 
+gem 'will_paginate', '~> 3.1.1'
+gem 'will_paginate-bootstrap' 
+#this is needed to add bootsrap style to pagination
+
 #https://github.com/norman/friendly_id
 gem 'friendly_id', '~> 5.2.4' # Note: You MUST use 5.0.0 or greater for Rails 4.0+
 
