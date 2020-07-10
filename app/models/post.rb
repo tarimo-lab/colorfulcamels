@@ -4,6 +4,7 @@ class Post < ApplicationRecord
 
   has_many :taggings, dependent: :destroy
   has_many :tags, through: :taggings
+  has_many :likes, dependent: :destroy
 
   self.per_page = 15
 
@@ -27,6 +28,22 @@ class Post < ApplicationRecord
     self.tags = names.split(',').map do |n|
       Tag.where(name: n.strip).first_or_create!
     end
+  end
+
+  def self.approved_public(page)
+    Post.where(approved:true, public:true).paginate(:page => page).order('id DESC')
+  end
+
+  def self.approved_all(page)
+    Post.where(approved:true).paginate(:page => page).order('id DESC')
+  end
+
+  def self.unapproved(page)
+    Post.where(approved:false).paginate(:page => page).order('id DESC')
+  end
+
+  def self.user_all(page,user)
+    Post.where(user_id:user.id).paginate(:page => page).order('id DESC')
   end
 
 end

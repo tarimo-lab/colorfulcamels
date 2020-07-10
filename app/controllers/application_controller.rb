@@ -41,6 +41,14 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def check_user
+    if current_user&.id
+      @user = User.find(current_user.id)
+    else
+      @user = nil
+    end
+  end
+
   def set_current_user
     if current_user&.id
       @user = User.find(current_user.id)

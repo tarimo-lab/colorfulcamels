@@ -33,11 +33,11 @@
 						
 					</ul>
 					<ul class="nav navbar-nav text-uppercase pull-left">
-						<li class="active"><a href="<%= root_path %>"><i class="fa fa-lg fa-home"></i> Home</a></li>
+						<li class="<%= 'active' if current_page?(controller:'home',action:'index') %>"><a href="<%= root_path %>"><i class="fa fa-lg fa-home"></i> Home</a></li>
 						<% if user_signed_in? %>
-							<li><a href="<%= user_root_path %>"><i class="fa fa-lg fa-user"></i> <%= @user.first_name %></a></li>
+							<li class="<%= 'active' if controller_name=="users" %>"><a href="<%= user_root_path %>"><i class="fa fa-lg fa-user"></i> <%= @user.first_name %></a></li>
 						<% end %>
-						<li><a href="<%= home_about_path %>"><i class="fa fa-lg fa-info"></i> About</a></li>
+						<li class="<%= 'active' if current_page?(controller:'home',action:'about') %>"><a href="<%= home_about_path %>"><i class="fa fa-lg fa-info"></i> About</a></li>
 						
 					</ul>
 				</div>

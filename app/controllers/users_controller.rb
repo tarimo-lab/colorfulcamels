@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   before_action :set_current_user
 
   def show
-    @posts = @user.posts;
+    @posts = Post.approved_all(params[:page])
   end
 
 end
